@@ -1,7 +1,7 @@
 
 ## Titanic: Machine Learning from Disaster
 **Predict survival on the Titanic**
-<hr>
+
 I barely remember first when exactly I watched Titanic movie but still now Titanic remains a discussion subject in the most diverse areas. The sinking of the RMS Titanic is one of the most infamous shipwrecks in history. It was April 15-1912 during her maiden voyage, the Titanic sank after colliding with an iceberg and killing 1502 out of 2224 passengers and crew. 
 
 In this kaggle challenge, we're asked to complete the analysis of what sorts of people were likely to survive. In particular, we're asked to apply the tools of **machine learning** to predict which passengers survived the tragedy.
@@ -12,8 +12,6 @@ More challenge information and datasets are available on [Kaagle Titanic Page](h
 - test set (test.csv)
 
 ## Look at the Big Picture <a class="anchor" id="4-bullet"></a>
-<hr>
-
 The goal is to build a Model that can predict the survival or the death of a given passenger based on a set of variables describing their such as age, sex, or passenger class on the boat.
 
 ### Frame the Problem
@@ -27,7 +25,6 @@ Basically, we've two datasets are available, a `train set` and a `test set`. We'
 To solve this **ML** problem, topics like feature analysis, data visualization, missing data imputation, feature engineering, model fine tuning and various classification models will be addressed for ensemble modeling.
 
 ### Preprocessing
-
 In Data Science or ML problem spaces, Data Preprocessing means a lot, which is to make the Data usable or clean before using it, like before fit the model.
 
 Now, the real world data is so messy, like following -
@@ -49,7 +46,6 @@ So what? Actually this is a matter of big concern. Because, Model can't handle m
 
 
 ## Table of Contents
-<hr>
 The steps we will go through:
 
 [Get The Data](#2-bullet)
@@ -75,9 +71,8 @@ Here, we will use various classificatiom models and compare the results. We'll u
 Create a CSV file and submit to Kaggle.
 
 # Import <a class="anchor" id="1-bullet"></a>
-<hr>
 At first we will load some various libraries. At first sight it may be confusing but we will see the use cases each of them in details later on.
-
+<br>
 
 ```python
 # Data Processing and Visualization Libraries
@@ -115,9 +110,8 @@ warnings.filterwarnings('ignore', category = DeprecationWarning)
 ```
 
 # Get Data Sets<a class="anchor" id="2-bullet"></a>
-<hr>
 Using pandas, we now load the dataset. Basically two files, one is for training purpose and other is for testng.
-
+<br>
 
 ```python
 # load the datasets using pandas's read_csv method
@@ -147,7 +141,6 @@ train.shape
     (891, 12)
 
 
-
 So it has 891 samples with 12 features. That's somewhat big, let's top 5 sample of it.
 
 
@@ -160,19 +153,7 @@ train.head()
 
 
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -328,19 +309,7 @@ train.describe()
 
 
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -470,19 +439,7 @@ find_missing_data(train)
 
 
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -575,7 +532,7 @@ sns.heatmap(train.isnull(), cbar = False ,
 
 
 
-![png](output_19_1.png)
+![png](https://github.com/iphton/Kaggle-Competition/blob/gh-pages/Titanic%20Competition/assets/output_19_1.png)
 
 
 We can see that, Cabin feature has terrible amount of missing values, around 77% data are missing. Until now, we only see train datasets, now let's see amount of missing values in whole datasets.
@@ -589,19 +546,6 @@ find_missing_data(dataset)
 
 
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -692,7 +636,7 @@ sns.heatmap(dataset.isnull(), cbar = False ,
 
 
 
-![png](output_22_1.png)
+![png](https://github.com/iphton/Kaggle-Competition/blob/gh-pages/Titanic%20Competition/assets/output_22_1.png)
 
 
 As it mentioned earlier, ground truth of test datasets are missing.
@@ -717,7 +661,6 @@ Now, the real world data is so messy, they're like -
 * outlier
 
 # Feature Analysis <a class="anchor" id="5-bullet"></a>
-<hr>
 
 ### Outlier Detection <a class="anchor" id="6-bullet"></a>
 
@@ -767,10 +710,6 @@ def detect_outliers(df,n,features):
 Outliers_to_drop = detect_outliers(train,2,["Age","SibSp","Parch","Fare"])
 ```
 
-    C:\Users\Mohammed Innat\Anaconda3\lib\site-packages\numpy\lib\function_base.py:4291: RuntimeWarning: Invalid value encountered in percentile
-      interpolation=interpolation)
-    
-
 
 ```python
 # Show the outliers rows
@@ -781,19 +720,6 @@ train.loc[Outliers_to_drop]
 
 
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -984,8 +910,6 @@ Now that we've removed outlier, let's analysis the various features and in the s
 - Categorical Analysi
 
 # Numerical Analysis  <a class="anchor" id="7-bullet"></a>
-<hr>
-
 At first let's analysis the correlation of 'Survived' features with the other numerical features like 'SibSp', 'Parch', 'Age', 'Fare'.
 
 
@@ -996,7 +920,7 @@ corr_numeric = sns.heatmap(dataset[["Survived","SibSp","Parch","Age","Fare"]].co
 ```
 
 
-![png](output_29_0.png)
+![png](https://github.com/iphton/Kaggle-Competition/blob/gh-pages/Titanic%20Competition/assets/output_29_0.png)
 
 
 Only Fare feature seems to have a significative correlation with the survival probability.
@@ -1015,7 +939,7 @@ age_survived = age_survived.map(sns.distplot, "Age")
 ```
 
 
-![png](output_32_0.png)
+![png](https://github.com/iphton/Kaggle-Competition/blob/gh-pages/Titanic%20Competition/assets/output_32_0.png)
 
 
 So, It's look like age distributions are not the same in the survived and not survived subpopulations. Indeed, there is a peak corresponding to young passengers, that have survived. We also see that passengers between 60-80 have less survived. So, even if "Age" is not correlated with "Survived", we can see that there is age categories of passengers that of have more or less chance to survive.
@@ -1038,7 +962,7 @@ fig.add_legend()
 
 
 
-![png](output_34_1.png)
+![png](https://github.com/iphton/Kaggle-Competition/blob/gh-pages/Titanic%20Competition/assets/output_34_1.png)
 
 
 Again we see that aged passengers between 65-80 have less survived.
@@ -1055,7 +979,7 @@ AS = sns.factorplot(y="Age", x="Sex", data = dataset, kind="box")
 ```
 
 
-![png](output_36_0.png)
+![png](https://github.com/iphton/Kaggle-Competition/blob/gh-pages/Titanic%20Competition/assets/output_36_0.png)
 
 
 Age distribution seems to be almost same in Male and Female subpopulations, so Sex is not informative to predict Age. Let's explore `age` and `pclass` distribution.
@@ -1070,7 +994,7 @@ plt.show()
 ```
 
 
-![png](output_38_0.png)
+![png](https://github.com/iphton/Kaggle-Competition/blob/gh-pages/Titanic%20Competition/assets/output_38_0.png)
 
 
 So, we see there're more young people from class 3. First class passenger seems more aged than second class and third class are following. But we can't get any information to predict age. But let's try an another approach to visualize with the same parameter.
@@ -1082,7 +1006,7 @@ PA = sns.factorplot(data = dataset , x = 'Pclass' , y = 'Age', kind = 'box')
 ```
 
 
-![png](output_40_0.png)
+![png](https://github.com/iphton/Kaggle-Competition/blob/gh-pages/Titanic%20Competition/assets/output_40_0.png)
 
 
 Here, we can get some information, First class passengers are older than 2nd class passengers who are also older than 3rd class passengers. We can easily visaulize that roughly `37, 29, 24` respectively are the median values of each classes. The strategy can be used to fill Age with the median age of similar rows according to Pclass.
@@ -1119,7 +1043,7 @@ sns.heatmap(dataset.isnull(), yticklabels = False, cbar = False, cmap = 'summer'
 
 
 
-![png](output_43_1.png)
+![png](https://github.com/iphton/Kaggle-Competition/blob/gh-pages/Titanic%20Competition/assets/output_43_1.png)
 
 
 `Fare` feature missing some values. However, we will handle it later.
@@ -1139,7 +1063,7 @@ Sib_Sur = Sib_Sur.set_ylabels("survival probability")
 ```
 
 
-![png](output_45_0.png)
+![png](https://github.com/iphton/Kaggle-Competition/blob/gh-pages/Titanic%20Competition/assets/output_45_0.png)
 
 
 It seems that passengers having a lot of siblings/spouses have less chance to survive.
@@ -1160,7 +1084,7 @@ Sur_Par = Sur_Par.set_ylabels("survival probability")
 ```
 
 
-![png](output_48_0.png)
+![png](https://github.com/iphton/Kaggle-Competition/blob/gh-pages/Titanic%20Competition/assets/output_48_0.png)
 
 
 Small families have more chance to survive, more than single.
@@ -1188,7 +1112,6 @@ dataset["Fare"] = dataset["Fare"].fillna(dataset["Fare"].median())
 ```
 
 # Categorical values  <a class="anchor" id="8-bullet"></a>
-<hr>
 
 We can turn categorical values into numerical values. This is simply needed because of feeding the traing data to model. We can use feature mapping or create dummy variables.
 
@@ -1246,7 +1169,7 @@ sns.countplot(data = train , x = 'Survived' , hue = 'Sex', palette = 'GnBu_d')
 
 
 
-![png](output_59_1.png)
+![png](https://github.com/iphton/Kaggle-Competition/blob/gh-pages/Titanic%20Competition/assets/output_59_1.png)
 
 
 
@@ -1259,19 +1182,6 @@ train[["Sex","Survived"]].groupby('Sex').mean()
 
 
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -1313,7 +1223,7 @@ plt.show()
 ```
 
 
-![png](output_63_0.png)
+![png](https://github.com/iphton/Kaggle-Competition/blob/gh-pages/Titanic%20Competition/assets/output_63_0.png)
 
 
 So, we see there're more young people from class 3. And more aged passenger were in first class, and that indicate that they're rich. So, most of the young people were in class three.
@@ -1330,13 +1240,12 @@ Survived_Pcalss = Survived_Pcalss.set_ylabels("survival probability")
 ```
 
 
-![png](output_65_0.png)
+![png](https://github.com/iphton/Kaggle-Competition/blob/gh-pages/Titanic%20Competition/assets/output_65_0.png)
 
 
 The passenger survival is not the same in the all classes. First class passengers have more chance to survive than second class and third class passengers. And Female survived more than Male in every classes.
 
 ## Embarked
-<hr>
 Port of Embarkation , C = Cherbourg, Q = Queenstown, S = Southampton. Categorical feature that should be encoded. We can use feature mapping or make dummy vairables for it.
 
 However, let's explore it combining `Pclass` and `Survivied` features. So that, we can get idea about the classes of passengers and also the concern embarked.
@@ -1348,7 +1257,7 @@ sns.barplot(dataset['Embarked'], dataset['Survived']);
 ```
 
 
-![png](output_67_0.png)
+![png](https://github.com/iphton/Kaggle-Competition/blob/gh-pages/Titanic%20Competition/assets/output_67_0.png)
 
 
 Looks like, coming from Cherbourg people have more chance to survive. But why? That's weird. Let's compare this feature with other variables.
@@ -1373,19 +1282,6 @@ dataset.groupby(['Embarked']).mean()
 
 
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -1482,7 +1378,7 @@ sns.heatmap(dataset.isnull(), yticklabels = False,
 
 
 
-![png](output_72_1.png)
+![png](https://github.com/iphton/Kaggle-Competition/blob/gh-pages/Titanic%20Competition/assets/output_72_1.png)
 
 
 And there it goes. Now, there's no missing values in Embarked feature. Let's explore this feature a little bit more. We can viz the survival probability with the amount of classes passenger embarked on different port.
@@ -1498,7 +1394,7 @@ Embarked_Pc = Embarked_Pc.set_ylabels("Count")
 ```
 
 
-![png](output_74_0.png)
+![png](https://github.com/iphton/Kaggle-Competition/blob/gh-pages/Titanic%20Competition/assets/output_74_0.png)
 
 
 Indeed, the third class is the most frequent for passenger coming from Southampton (S) and Queenstown (Q), and but Cherbourg passengers are mostly in first class. From this, we can also get idea about the economic condition of these region on that time.
@@ -1531,19 +1427,6 @@ dataset.head()
 
 
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -1668,7 +1551,6 @@ Feature engineering is the art of converting raw data into useful features. Ther
 
 But we don't wanna be too serious on this rather than simply apply feature engineering approaches to get usefull information.
 
-<hr>
 
 ## Name 
 
@@ -1751,7 +1633,7 @@ sns.barplot(x=dataset['Title'], y = dataset['Age'])
 
 
 
-![png](output_82_1.png)
+![png](https://github.com/iphton/Kaggle-Competition/blob/gh-pages/Titanic%20Competition/assets/output_82_1.png)
 
 
 
@@ -1809,7 +1691,7 @@ sns.countplot(dataset["Title"]).set_xticklabels(["Master","Miss-Mrs","Mr","Rare"
 ```
 
 
-![png](output_86_0.png)
+![png](https://github.com/iphton/Kaggle-Competition/blob/gh-pages/Titanic%20Competition/assets/output_86_0.png)
 
 
 
@@ -1819,7 +1701,7 @@ sns.barplot(x='Title', y='Survived', data=dataset);
 ```
 
 
-![png](output_87_0.png)
+![png](https://github.com/iphton/Kaggle-Competition/blob/gh-pages/Titanic%20Competition/assets/output_87_0.png)
 
 
 Catching Aspects:
@@ -1842,19 +1724,6 @@ dataset.head()
 
 
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -1986,7 +1855,7 @@ plt.xlim(0);
 ```
 
 
-![png](output_92_0.png)
+![png](https://github.com/iphton/Kaggle-Competition/blob/gh-pages/Titanic%20Competition/assets/output_92_0.png)
 
 
 Survival probability is worst for large families.
@@ -2002,7 +1871,6 @@ dataset.drop(labels = ["Ticket",'Cabin','PassengerId'], axis = 1,
 ```
 
 # Prdictive Modeling <a class="anchor" id="10-bullet"></a>
-<hr>
 
 Here, we split our datasets according to the previous amounts and make test and train set. To avoid overfitting event we can create validation set but that's not effective. So, we use [**K-Fold**](http://scikit-learn.org/stable/modules/cross_validation.html#k-fold) approaches and use [**StratifiedKFold**](http://scikit-learn.org/stable/modules/cross_validation.html#stratified-k-fold) to split the train datasets into 10 (by default).
 
@@ -2029,8 +1897,6 @@ K_fold = StratifiedKFold(n_splits=10)
     
 
 ## Classifier <a class="anchor" id="11-bullet"></a>
-<hr>
-
 I compared 10 popular classifiers and evaluate the mean accuracy of each of them by a stratified kfold cross validation procedure.
 
 - KNN
@@ -2102,7 +1968,7 @@ cv_plot = cv_plot.set_title("CV Scores")
 ```
 
 
-![png](output_99_0.png)
+![png](https://github.com/iphton/Kaggle-Competition/blob/gh-pages/Titanic%20Competition/assets/output_99_0.png)
 
 
 Let's explore following models separately:
@@ -2253,7 +2119,6 @@ round(np.mean(scores)*100, 2)
 
 
 # Hyperparameter Tuning <a class="anchor" id="12-bullet"></a>
-<hr>
 
 I decided to choose this promising models of GradientBoosting, Linear Discriminant Analysis, RandomForest, Logistic Regression and SVM for the ensemble modeling. So, now we need to fine-tune them.
 
@@ -2450,7 +2315,6 @@ gsSVMC.best_score_
 
 ##  Plot Learning Curves <a class="anchor" id="13-bullet"></a>
 **Diagnose Bias and Variance to Reduce Error**
-<hr>
 Learning curves are a good way to see the overfitting and underfitting effect on the training set and the effect of the training size on the accuracy. Learning curves plots the model's performance on the training set and the validation set as a function of training set size. To generate the plots, we simply train the model several times on different sized subsets of the training sets. In a nutshell, a learning curves shows how error changes as the training set size increases.
 
 If a models perform well on the training data but generalizes poorly according to the cross-validation metrics, the model is called overfitting. And again if it performs poorly on both, the model is called underfitting.
@@ -2466,7 +2330,6 @@ When the model is trained on very few training instances, it is incapable of gen
 
 
 ## Bias-Variance Trade-Off
-<hr>
 A model's generalization error can be expressed as the sum of three very different errors.
 
 - Bias
@@ -2571,7 +2434,7 @@ plot_learning_curve(estimator = gsGBC.best_estimator_,title = "GBC learning curv
 ```
 
 
-![png](output_115_0.png)
+![png](https://github.com/iphton/Kaggle-Competition/blob/gh-pages/Titanic%20Competition/assets/output_115_0.png)
 
 
 
@@ -2582,7 +2445,7 @@ plot_learning_curve(estimator = gsRFC.best_estimator_ ,title = "RF learninc curv
 ```
 
 
-![png](output_116_0.png)
+![png](https://github.com/iphton/Kaggle-Competition/blob/gh-pages/Titanic%20Competition/assets/output_116_0.png)
 
 
 
@@ -2593,7 +2456,7 @@ plot_learning_curve(estimator = Log_Model ,title = "Logistic Regression - Learni
 ```
 
 
-![png](output_117_0.png)
+![png](https://github.com/iphton/Kaggle-Competition/blob/gh-pages/Titanic%20Competition/assets/output_117_0.png)
 
 
 
@@ -2604,7 +2467,7 @@ plot_learning_curve(estimator = gsLDA.best_estimator_ ,title = "Linear Discrimin
 ```
 
 
-![png](output_118_0.png)
+![png](https://github.com/iphton/Kaggle-Competition/blob/gh-pages/Titanic%20Competition/assets/output_118_0.png)
 
 
 
@@ -2615,13 +2478,12 @@ plot_learning_curve(estimator = gsSVMC.best_estimator_,title = "SVC learning cur
 ```
 
 
-![png](output_119_0.png)
+![png](https://github.com/iphton/Kaggle-Competition/blob/gh-pages/Titanic%20Competition/assets/output_119_0.png)
 
 
 SVC seem to better generalize the prediction since the training and cross-validation curves are close together. And again Random Forest and GradientBoosting classifiers tend to overfit the training set. One way to improve the overfitting model is to feed it more training data until the validation error reaches the training error.
 
 # Ensemble modeling <a class="anchor" id="14-bullet"></a>
-<hr>
 
 The another way to fine-tune our system is to try to combine the models that perform best. The goup will often perform better than the best individual model, especially if the individual models make very different types of errors.
 
@@ -2668,7 +2530,7 @@ plot_learning_curve(estimator = VotingPredictor, title = "VP learning curve",
 ```
 
 
-![png](output_123_0.png)
+![png](https://github.com/iphton/Kaggle-Competition/blob/gh-pages/Titanic%20Competition/assets/output_123_0.png)
 
 
 ## Submit Predictor  <a class="anchor" id="15-bullet"></a>
@@ -2694,19 +2556,6 @@ submission.head()
 
 
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
