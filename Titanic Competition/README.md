@@ -1,4 +1,6 @@
 
+Go through with [Notebook Viewer](http://nbviewer.jupyter.org/github/iphton/Kaggle-Competition/blob/gh-pages/Titanic%20Competition/Notebook/Predict%20survival%20on%20the%20Titanic.ipynb)
+
 ## Titanic: Machine Learning from Disaster
 **Predict survival on the Titanic**
 
@@ -2545,53 +2547,6 @@ Predictive_Model = pd.DataFrame({
 Predictive_Model.to_csv('titanic_model.csv', index=False)
 ```
 
+---
 
-```python
-# Let's look inside
-submission = pd.read_csv('titanic_model.csv')
-submission.head()
-```
-
-
-
-
-<div>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>PassengerId</th>
-      <th>Survived</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>892</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>893</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>894</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>895</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>896</td>
-      <td>0</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-
-
+Go through with [Notebook Viewer](http://nbviewer.jupyter.org/github/iphton/Kaggle-Competition/blob/gh-pages/Titanic%20Competition/Notebook/Predict%20survival%20on%20the%20Titanic.ipynb)
