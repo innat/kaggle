@@ -1,3 +1,6 @@
+# Capsule Network on MNIST dataset
+---
+
 ## Usage<br>
 
 **Step 1: Installation** <br>
@@ -15,7 +18,7 @@ Open the notebook and navigate to the downloaded folder and search for `MNIST_Ke
 nodebook, just a run each cell consecutively. 
 
 
-## Computational Graph<br>
+## Computational Graph | CapsNet<br>
 Open up `CMD` and run folowing command: `tensorboard --logdir ConvNet/KerasGraph`. You should get a locahost address, just copy and 
 paste it on web browser. Alternatively, after running above command and started the server, go to any browser and type `localhost:(port-number)`.
 
@@ -42,6 +45,7 @@ Learning Rate Decay:
 
 ![learning_rate](https://user-images.githubusercontent.com/17668390/46923803-1c3bd380-d03f-11e8-8276-d8ab6984f55b.PNG)
 
+---
 
 ## Miscellaneous Implementations
 
