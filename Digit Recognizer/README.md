@@ -1,8 +1,5 @@
 ## Hand Written Digit Classification
 
-MNIST ("Modified National Institute of Standards and Technology") is the de facto “hello world” dataset of computer vision. As new machine learning techniques emerge, MNIST remains a reliable resource for researchers and learners alike. 
-
-
 The data files `train.csv` and `test.csv` contain gray-scale images of hand-drawn digits, from zero through nine. Each image is 28 pixels 
 in height and 28 pixels in width, for a total of 784 pixels in total. Each pixel has a single pixel-value associated with it, indicating 
 the lightness or darkness of that pixel, with higher numbers meaning darker. This pixel-value is an integer between 0 and 255, inclusive.
@@ -14,3 +11,22 @@ The test data set, (test.csv), is the same as the training set, except that it d
 
 ## Task<br>
 Goal is to correctly identify digits from a dataset of tens of thousands of handwritten images.
+
+## Deep Learninig Models<br>
+To accomplish this task we've implemented two neural architectures. Now, MNIST ("Modified National Institute of Standards and Technology") is the de facto “hello world” dataset of computer vision. As new machine learning techniques emerge, MNIST remains a reliable resource for researchers and learners alike. 
+
+We've worked on a well known archtecture which is **Convolutional Neural Network**. The one of the most profoundly used neural network for computer vision in deep learning spheres. But it also has some drawbacks. **Geoffrey Hinton** proposed a architecture that introduced a completely new type of neural network based on so-called capsules. **CapsNets** are a new neural net architecture that may well have a profound impact on deep learning, in particular for computer vision. [Read](https://arxiv.org/abs/1710.09829) the paper of Hinton working on *Dynamic Routing Between Capsules*.
+
+We've implemented both archtecture and both has achieved **99%** accuracy on the test set. One of the most exciting things that I've found is that, the accuracy of the models in both case are significantly higher on the test set which means our models isn't overfitting. 
+
+- Convolutional Network
+- Capsule Network
+
+However, at the moment **CapsNets** is still under development. To get the intuition of this network **Aurélien Géron** ( one of my favorite person ) made a awesome [intro video](https://www.youtube.com/watch?v=pPN8d0E3900) on it.
+
+
+
+
+
+
+
