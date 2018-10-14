@@ -10,7 +10,7 @@ the columns contain the pixel-values of the associated image.
 The test data set, (test.csv), is the same as the training set, except that it does not contain the label column.
 
 ## Task<br>
-Goal is to correctly identify digits from a dataset of tens of thousands of handwritten images.
+Goal is to correctly identify digits from a dataset of tens of thousands of handwritten images. 
 
 ## Deep Learninig Models<br>
 To accomplish this task we've implemented two neural architectures. Now, MNIST ("Modified National Institute of Standards and Technology") is the de facto “hello world” dataset of computer vision. As new machine learning techniques emerge, MNIST remains a reliable resource for researchers and learners alike. 
@@ -24,9 +24,16 @@ We've implemented both archtecture and both has achieved **99%** accuracy on the
 
 However, at the moment **CapsNets** is still under development. To get the intuition of this network **Aurélien Géron** ( one of my favorite person ) made a awesome [intro video](https://www.youtube.com/watch?v=pPN8d0E3900) on it.
 
+## About this repositories<br>
+This is nothing like serious project. Just curiously wanted to see the working procedure of **CapsNet** archtecture on image classification and yes, I traditionally choose **MNIST** dataset.
 
+## Usages<br>
+Right now, there're two folders. Namely,
 
+- ConvNet
+- CapsuleNet
 
+In **ConvNet**, we've implemented Convolutional network using **Tensorflow's** high level API **Keras** by creating several convolution layers. We used **Adam** for the optimization of cost function. After training the model, we save the **model** and **weights** in `json` and `hdf5` format respectively on disk. We also saw the *learning curve* by calling the **tensorboard** and viz the computatinal graph as well. However, all the set-up and execute instruction of this model is clearly provided on the jupyter notebook, in place inside the **ConvNet** folder.
 
-
+And the **CapsNet**, the point of interest of the work. It's so heavy to run the model. I trained the model on **GeForce GTX 1050 Ti**. I set **10** epochs on the training process and took almost 40 mins. However, Training on a single CPU, epochs size should be set within < 3. The computation task is pretty complex and takes lots of computation power. We saw the *learning curve* by calling the **tensorboard** and viz the computatinal graph as well. However, all the set-up and execute instruction of this model is clearly provided on the jupyter notebook, in place inside the **CapsNet** folder.
 
