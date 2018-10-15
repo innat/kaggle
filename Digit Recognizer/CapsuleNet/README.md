@@ -18,7 +18,7 @@ nodebook, just a run each cell consecutively.
 
 
 ## Computational Graph | CapsNet<br>
-Open up `CMD` and run folowing command: `tensorboard --logdir ConvNet/KerasGraph`. You should get a locahost address, just copy and 
+Open up `CMD` and run folowing command: `tensorboard --logdir ConvNet/KerasGraph`. You should get a localhost address, just copy and 
 paste it on web browser. Alternatively, after running above command and started the server, go to any browser and type `localhost:(port-number)`.
 
 ![computation_graph](https://user-images.githubusercontent.com/17668390/46923780-dbdc5580-d03e-11e8-85ae-39f92e2dcb88.png)
