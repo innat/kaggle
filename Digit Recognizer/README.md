@@ -37,9 +37,6 @@ We've implemented both archtecture and both has achieved **99%** accuracy on the
 
 However, at the moment **CapsNets** is still under development. To get the intuition of this network **Aurélien Géron** ( one of my favorite author ) made a awesome [intro video](https://www.youtube.com/watch?v=pPN8d0E3900) on it.
 
-## About this repositories<br>
-This is nothing like serious project. Just curiously wanted to see the working procedure of **CapsNet** archtecture on image classification and yes, I traditionally choose **MNIST** dataset.
-
 ## Usages<br>
 Right now, there're two folders. Namely,
 
@@ -58,3 +55,7 @@ The computational graph of our applied convolution.
 **Capsule Network**<br>
 The computational graph of our applied capsule network.
 ![computation_graph](https://user-images.githubusercontent.com/17668390/46923780-dbdc5580-d03e-11e8-85ae-39f92e2dcb88.png)
+
+
+## About this repositories<br>
+This is nothing like serious project. Just curiously wanted to see the working procedure of **CapsNet** archtecture on image classification and yes, I traditionally choose **MNIST** dataset.
