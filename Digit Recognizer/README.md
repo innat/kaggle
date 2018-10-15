@@ -37,9 +37,11 @@ In **ConvNet**, we've implemented Convolutional network using **Tensorflow's** h
 
 And the **CapsNet**, the point of interest of the work. It's so heavy to run the model. I trained the model on **GeForce GTX 1050 Ti**. I set **10** epochs on the training process and took almost 40 mins. However, Training on a single CPU, epochs size should be set within < 3. The computation task is pretty complex and takes lots of computation power. We saw the *learning curve* by calling the **tensorboard** and viz the computatinal graph as well. However, all the set-up and execute instruction of this model is clearly provided on the jupyter notebook, in place inside the **CapsNet** folder.
 
-## Computational Graph<br>
-**Convolutional Network**
+## Computational Graph<br><br>
+**Convolutional Network**<br>
+The computational graph of our applied convolution.
 ![model_graph](https://user-images.githubusercontent.com/17668390/46923691-5e641580-d03d-11e8-91d2-2a1049fb7ce4.png)
-**Capsule Network**
+<br>
+**Capsule Network**<br>
+The computational graph of our applied capsule network.
 ![computation_graph](https://user-images.githubusercontent.com/17668390/46923780-dbdc5580-d03e-11e8-85ae-39f92e2dcb88.png)
-
