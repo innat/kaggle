@@ -7,7 +7,7 @@ In this kaggle challenge, we're asked to complete the analysis of what sorts of 
   - Random Forest Classifer
   - Support Vectore Machine
   
-  Finally, I used **voting classifier** to combine the predictions coming from the 5 classifiers. And got prediction accuracy almost **82.97%** 
+  Finally, We've used **voting classifier** to combine the predictions coming from the 5 classifiers. And got prediction accuracy almost **82.97%** 
 
 - ✔ [Digit Classification](https://github.com/iphton/Kaggle-Competition/tree/gh-pages/Digit%20Recognizer)<br>
 The goal in this competition is to take an image of a handwritten single digit, and determine what that digit is. For every **ImageId** in the test set, we should predict the correct label. We've implemented two architectures stated following and both has achieved **99%+** accuracy on the test set. 
