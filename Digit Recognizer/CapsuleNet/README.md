@@ -24,6 +24,10 @@ paste it on web browser. Alternatively, after running above command and started 
 ![computation_graph](https://user-images.githubusercontent.com/17668390/46923780-dbdc5580-d03e-11e8-85ae-39f92e2dcb88.png)
 
 ## Results<br>
+
+**Test accuracy achieves 99%.** The computational process is pretty complex and training **CapsNet** by setting epoch at too high on weak 
+machine may hang easily. I ran the **CpasNet** model with GeForce *GTX 1050 Ti* at **10 epoch** and it took me almost 40 mins. Not to much right but My PC got hanged and forcely restarted two times automatically at epoch 15~20.
+
 Accuracy:
 
 ![accuracy](https://user-images.githubusercontent.com/17668390/46923787-ec8ccb80-d03e-11e8-993d-d6ec72b2f0ec.PNG)
