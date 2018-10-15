@@ -9,8 +9,8 @@
 
 
 **Step 2: Download Files**<br>
-[Download](https://github.com/iphton/Kaggle-Competition/tree/gh-pages/Digit%20Recognizer) all files save it
-on your working directory.
+[Download](https://github.com/iphton/Kaggle-Competition/tree/gh-pages/Digit%20Recognizer) dataset files and save it
+on working directory.
 
 **Step 3: Open Jupyter Notebook**<br>
 Open the notebook and navigate to the downloaded folder and search for `MNIST_Keras.ipynb`. After opening the 
