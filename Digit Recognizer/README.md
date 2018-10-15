@@ -25,10 +25,10 @@ ImageId,Label
 etc.
 ```
 
-## Deep Learninig Models<br>
+## Deep Learninig Models : ConvNet vs CapsNet<br>
 To accomplish this task we've implemented two neural architectures. Now, MNIST ("Modified National Institute of Standards and Technology") is the de facto “hello world” dataset of computer vision. As new machine learning techniques emerge, MNIST remains a reliable resource for researchers and learners alike. 
 
-We've worked on a well known archtecture which is **Convolutional Neural Network**. The one of the most profoundly used neural network for computer vision in deep learning spheres. But it also has some drawbacks. **Geoffrey Hinton** proposed a architecture that introduced a completely new type of neural network based on so-called capsules. **CapsNets** are a new neural net architecture that may well have a profound impact on deep learning, in particular for computer vision. [Read](https://arxiv.org/abs/1710.09829) the paper of Hinton working on *Dynamic Routing Between Capsules*.
+We've worked on a well known architecture which is **Convolutional Neural Network**. The one of the most profoundly used neural network for computer vision in deep learning spheres. But it also has some drawbacks. **Geoffrey Hinton** proposed a architecture that introduced a completely new type of neural network based on so-called capsules. **CapsNets** are a new neural net architecture that may well have a profound impact on deep learning, in particular for computer vision. [Read](https://arxiv.org/abs/1710.09829) the paper of Hinton working on ***Dynamic Routing Between Capsules***.
 
 We've implemented both archtecture and both has achieved **99%** accuracy on the test set. One of the most exciting things that I've found is that, the accuracy of the models in both case are significantly higher on the test set which means our models isn't overfitting. 
 
