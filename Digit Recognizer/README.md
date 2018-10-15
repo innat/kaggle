@@ -1,8 +1,6 @@
-## Hand Written Digit Classification
+## Competition Description : Digit Classification - Kaggle
 
-The data files `train.csv` and `test.csv` contain gray-scale images of hand-drawn digits, from zero through nine. Each image is 28 pixels 
-in height and 28 pixels in width, for a total of 784 pixels in total. Each pixel has a single pixel-value associated with it, indicating 
-the lightness or darkness of that pixel, with higher numbers meaning darker. This pixel-value is an integer between 0 and 255, inclusive.
+Computer Vision fundamentals with the famous MNIST data. [Download](https://www.kaggle.com/c/digit-recognizer/data) the MNIST dataset from kaggle. The data files `train.csv` and `test.csv` contain gray-scale images of hand-drawn digits, from zero through nine. Each image is 28 pixels in height and 28 pixels in width, for a total of 784 pixels in total. Each pixel has a single pixel-value associated with it, indicating the lightness or darkness of that pixel, with higher numbers meaning darker. This pixel-value is an integer between 0 and 255, inclusive.
 
 The training data set, (train.csv), has 785 columns. The first column, called label, is the digit that was drawn by the user. The rest of
 the columns contain the pixel-values of the associated image.
@@ -10,7 +8,22 @@ the columns contain the pixel-values of the associated image.
 The test data set, (test.csv), is the same as the training set, except that it does not contain the label column.
 
 ## Task<br>
-Goal is to correctly identify digits from a dataset of tens of thousands of handwritten images. 
+The goal in this competition is to take an image of a handwritten single digit, and determine what that digit is.
+For every **ImageId** in the test set, we should predict the correct label.
+
+## Metric<br>
+This competition is evaluated on the **categorization accuracy** of our predictions (the percentage of images we get correct).
+
+## Submission File Format<br>
+The file should contain a header and have the following format:
+
+```
+ImageId,Label
+1,0
+2,0
+3,0
+etc.
+```
 
 ## Deep Learninig Models<br>
 To accomplish this task we've implemented two neural architectures. Now, MNIST ("Modified National Institute of Standards and Technology") is the de facto “hello world” dataset of computer vision. As new machine learning techniques emerge, MNIST remains a reliable resource for researchers and learners alike. 
