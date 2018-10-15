@@ -1,5 +1,4 @@
 # Capsule Network on MNIST dataset
----
 
 ## Usage<br>
 
