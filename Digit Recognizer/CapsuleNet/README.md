@@ -13,7 +13,7 @@
 on working directory.
 
 **Step 3: Open Jupyter Notebook**<br>
-Open the notebook and navigate to the downloaded folder and search for `MNIST_Keras.ipynb`. After opening the 
+Open the notebook and navigate to the downloaded folder and search for `MNIST_CapsuleNet.ipynb`. After opening the 
 nodebook, just a run each cell consecutively. 
 
 
