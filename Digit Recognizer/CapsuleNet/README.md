@@ -48,7 +48,7 @@ Learning Rate Decay:
 
 ![learning_rate](https://user-images.githubusercontent.com/17668390/46923803-1c3bd380-d03f-11e8-8276-d8ab6984f55b.PNG)
 
----
+<br>
 
 ## Miscellaneous Implementations
 
