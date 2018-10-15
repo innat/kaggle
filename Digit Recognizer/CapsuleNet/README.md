@@ -9,7 +9,7 @@
 
 
 **Step 2: Download Files**<br>
-[Download](https://github.com/iphton/Kaggle-Competition/tree/gh-pages/Digit%20Recognizer) dataset files and save it
+Clone this repo and [Download](https://github.com/iphton/Kaggle-Competition/tree/gh-pages/Digit%20Recognizer) dataset files and save it
 on working directory.
 
 **Step 3: Open Jupyter Notebook**<br>
