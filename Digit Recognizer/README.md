@@ -35,7 +35,7 @@ We've implemented both archtecture and both has achieved **99%** accuracy on the
 - Convolutional Network
 - Capsule Network
 
-However, at the moment **CapsNets** is still under development. To get the intuition of this network **Aurélien Géron** ( one of my favorite person ) made a awesome [intro video](https://www.youtube.com/watch?v=pPN8d0E3900) on it.
+However, at the moment **CapsNets** is still under development. To get the intuition of this network **Aurélien Géron** ( one of my favorite author ) made a awesome [intro video](https://www.youtube.com/watch?v=pPN8d0E3900) on it.
 
 ## About this repositories<br>
 This is nothing like serious project. Just curiously wanted to see the working procedure of **CapsNet** archtecture on image classification and yes, I traditionally choose **MNIST** dataset.
