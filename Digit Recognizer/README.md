@@ -1,5 +1,9 @@
 ## Competition Description : Digit Classification - Kaggle
-**Beginner Noodles**
+
+## About: Beginner Noodles<br>
+This is nothing like serious project. Just curiously wanted to see the working procedure of **CapsNet** archtecture on image classification and yes, I traditionally choose **MNIST** dataset.
+
+---
 
 Computer Vision fundamentals with the famous MNIST data. [Download](https://www.kaggle.com/c/digit-recognizer/data) the MNIST dataset from kaggle. The data files `train.csv` and `test.csv` contain gray-scale images of hand-drawn digits, from zero through nine. Each image is 28 pixels in height and 28 pixels in width, for a total of 784 pixels in total. Each pixel has a single pixel-value associated with it, indicating the lightness or darkness of that pixel, with higher numbers meaning darker. This pixel-value is an integer between 0 and 255, inclusive.
 
@@ -58,5 +62,4 @@ The computational graph of our applied capsule network.
 ![computation_graph](https://user-images.githubusercontent.com/17668390/46923780-dbdc5580-d03e-11e8-85ae-39f92e2dcb88.png)
 
 
-## About <br>
-This is nothing like serious project. Just curiously wanted to see the working procedure of **CapsNet** archtecture on image classification and yes, I traditionally choose **MNIST** dataset.
+
