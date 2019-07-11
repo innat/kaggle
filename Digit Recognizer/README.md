@@ -58,5 +58,5 @@ The computational graph of our applied capsule network.
 ![computation_graph](https://user-images.githubusercontent.com/17668390/46923780-dbdc5580-d03e-11e8-85ae-39f92e2dcb88.png)
 
 
-## About this repositories<br>
+## About <br>
 This is nothing like serious project. Just curiously wanted to see the working procedure of **CapsNet** archtecture on image classification and yes, I traditionally choose **MNIST** dataset.
